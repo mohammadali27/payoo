@@ -34,7 +34,7 @@
     </style>
   </head>
   <body class="min-h-screen max-w-md bg-base-200 mx-auto">
-    <header class="border-b-2 border-gray-300 sticky top-0 z-10 bg-slate-300">
+    <header class="border-b-2 border-gray-300">
       <nav class="w-11/12 mx-auto py-3 flex justify-between items-center">
         <div class="flex gap-2">
           <div class="w-[60px]">
@@ -67,17 +67,11 @@
     </section>
     <section>
       <div class="w-11/12 mx-auto py-3 grid grid-cols-3 gap-3">
-        <button
-          id="addMany"
-          class="btn btn-primary btn-soft flex flex-col h-full py-4"
-        >
+        <button  id="addMany" class="btn btn-primary btn-soft flex flex-col h-full py-4">
           <img src="./assets/opt-1.png" alt="" />
           <p>Add Money</p>
         </button>
-        <button
-          id="cassout"
-          class="btn btn-primary btn-soft flex flex-col h-full py-4"
-        >
+        <button id="cassout" class="btn btn-primary btn-soft flex flex-col h-full py-4">
           <img src="./assets/opt-2.png" alt="" />
           <p>Cashout</p>
         </button>
@@ -99,84 +93,41 @@
         </button>
       </div>
     </section>
-    <section class="">
-      <div class="w-11/12 mx-auto py-10 space-y-5">
-        <div class="flex justify-between">
-          <h2 class="font-bold text-2xl">Latest Payment</h2>
-          <button class="btn border-none">View All</button>
-        </div>
-        <div class="flex bg-white items-center rounded-2xl justify-between">
-          <div class="flex items-center h-full p-2 gap-3">
-            <div class="">
-              <img src="./assets/opt-1.png" alt="" />
-            </div>
-            <div class="">
-              <h2>Bank Deposit</h2>
-              <p>Today 01:44 AM</p>
-            </div>
-          </div>
-
-          <div class="">
-            <button class="btn bg-white rounded-full border-none">
-              <img src="./assets/Frame.png" alt="" />
+    <div class="form pt-8">
+      <div
+        class="card bg-base-100 w-full max-w-sm shrink-0 rounded-2xl mx-auto"
+      >
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label font-bold text-neutral">Mobile Number</label>
+            <input
+              id="bumber-btn"
+              maxlength="11"
+              minlength="11"
+              type="text"
+              class="input rounded-full bg-base-200"
+              value="01404504694"
+              placeholder="Enter your number"
+            />
+            <br />
+            <label class="label font-bold text-neutral">4 Digit Pin</label>
+            <input
+              id="pin-input"
+              maxlength="4"
+              minlength="4"
+              type="password"
+              class="input rounded-full"
+              placeholder="Enter 4 Digit Pin"
+            />
+            <button id="login-btn" class="btn btn-primary mt-4 rounded-full">
+              Login
             </button>
-          </div>
-        </div>
-        <div class="flex bg-white items-center rounded-2xl justify-between">
-          <div class="flex items-center h-full p-2 gap-3">
-            <div class="">
-              <img src="./assets/opt-1.png" alt="" />
-            </div>
-            <div class="">
-              <h2>Bank Deposit</h2>
-              <p>Today 01:44 AM</p>
-            </div>
-          </div>
-
-          <div class="">
-            <button class="btn bg-white rounded-full border-none">
-              <img src="./assets/Frame.png" alt="" />
-            </button>
-          </div>
-        </div>
-        <div class="flex bg-white items-center rounded-2xl justify-between">
-          <div class="flex items-center h-full p-2 gap-3">
-            <div class="">
-              <img src="./assets/opt-1.png" alt="" />
-            </div>
-            <div class="">
-              <h2>Bank Deposit</h2>
-              <p>Today 01:44 AM</p>
-            </div>
-          </div>
-
-          <div class="">
-            <button class="btn bg-white rounded-full border-none">
-              <img src="./assets/Frame.png" alt="" />
-            </button>
-          </div>
-        </div>
-        <div class="flex bg-white items-center rounded-2xl justify-between">
-          <div class="flex items-center h-full p-2 gap-3">
-            <div class="">
-              <img src="./assets/opt-1.png" alt="" />
-            </div>
-            <div class="">
-              <h2>Bank Deposit</h2>
-              <p>Today 01:44 AM</p>
-            </div>
-          </div>
-
-          <div class="">
-            <button class="btn bg-white rounded-full border-none">
-              <img src="./assets/Frame.png" alt="" />
-            </button>
-          </div>
+          </fieldset>
         </div>
       </div>
-    </section>
+    </div>
 
-    <script>
+   <script>
       document.getElementById("cassout").addEventListener("click", function () {
         window.location.assign("./cassOut.html");
       });
